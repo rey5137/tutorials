@@ -16,7 +16,7 @@ import android.os.SystemClock;
 /**
  * Created by Rey on 5/24/2015.
  */
-public class AnimateStateBorderDrawable extends Drawable implements Animatable{
+public class AnimatedStateBorderDrawable extends Drawable implements Animatable{
 
     private boolean mRunning = false;
     private long mStartTime;
@@ -35,7 +35,7 @@ public class AnimateStateBorderDrawable extends Drawable implements Animatable{
 
     private static final long FRAME_DURATION = 1000 / 60;
 
-    public AnimateStateBorderDrawable(ColorStateList colorStateList, int borderWidth, int borderRadius, int duration){
+    public AnimatedStateBorderDrawable(ColorStateList colorStateList, int borderWidth, int borderRadius, int duration){
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.FILL);
 

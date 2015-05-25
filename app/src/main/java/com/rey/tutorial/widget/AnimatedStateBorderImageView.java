@@ -10,36 +10,35 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.rey.tutorial.R;
-import com.rey.tutorial.drawable.AnimateStateBorderDrawable;
-import com.rey.tutorial.drawable.StateBorderDrawable;
+import com.rey.tutorial.drawable.AnimatedStateBorderDrawable;
 
 /**
  * Created by Rey on 5/24/2015.
  */
-public class AnimateStateBorderImageView extends ImageView{
+public class AnimatedStateBorderImageView extends ImageView{
 
-    AnimateStateBorderDrawable mBorder;
+    AnimatedStateBorderDrawable mBorder;
 
-    public AnimateStateBorderImageView(Context context) {
+    public AnimatedStateBorderImageView(Context context) {
         super(context);
 
         init(context, null, 0, 0);
     }
 
-    public AnimateStateBorderImageView(Context context, AttributeSet attrs) {
+    public AnimatedStateBorderImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         init(context, attrs, 0, 0);
     }
 
-    public AnimateStateBorderImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public AnimatedStateBorderImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         init(context, attrs, defStyleAttr, 0);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public AnimateStateBorderImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public AnimatedStateBorderImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
 
         init(context, attrs, defStyleAttr, defStyleRes);
@@ -57,7 +56,7 @@ public class AnimateStateBorderImageView extends ImageView{
         };
         ColorStateList colorStateList = new ColorStateList(states, colors);
 
-        mBorder = new AnimateStateBorderDrawable(colorStateList, getPaddingLeft(), getPaddingLeft() / 2, context.getResources().getInteger(android.R.integer.config_mediumAnimTime));
+        mBorder = new AnimatedStateBorderDrawable(colorStateList, getPaddingLeft(), getPaddingLeft() / 2, context.getResources().getInteger(android.R.integer.config_mediumAnimTime));
         mBorder.setCallback(this);
     }
 
