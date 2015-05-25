@@ -7,6 +7,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+import com.rey.tutorial.R;
 import com.rey.tutorial.drawable.BorderDrawable;
 
 /**
@@ -43,7 +44,7 @@ public class BorderImageView extends ImageView{
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes){
         setWillNotDraw(false);
-        mBorder = new BorderDrawable(0xFFFF0000, getPaddingLeft(), getPaddingLeft() / 2);
+        mBorder = new BorderDrawable(context.getResources().getColor(R.color.primary), getPaddingLeft(), getPaddingLeft() / 2);
     }
 
     @Override

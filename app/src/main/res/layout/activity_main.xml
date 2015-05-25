@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:fillViewport="true"
+    android:padding="16dp"
+    android:clipToPadding="false">
 
-    <com.rey.tutorial.widget.BorderImageView
-        android:id="@+id/main_iv_border"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:src="@drawable/avatar"
-        android:scaleType="centerCrop"
-        android:padding="8dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#FF000000"
+            android:text="BorderImageView"/>
+
+        <com.rey.tutorial.widget.BorderImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/avatar"
+            android:scaleType="centerCrop"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#FF000000"
+            android:text="StateBorderImageView"/>
+
+        <com.rey.tutorial.widget.StateBorderImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/avatar"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#FF000000"
+            android:text="AnimateStateBorderImageView"/>
+
+        <com.rey.tutorial.widget.AnimateStateBorderImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/avatar"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+</ScrollView>
