@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bt_bitmap"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:text="BITMAP"/>
+
+        <Button
+            android:id="@+id/bt_path"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:text="PATH"/>
+
+        <Button
+            android:id="@+id/bt_gradient"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:text="GRADIENT"/>
+
+
+    </LinearLayout>
+
+    <com.rey.tutorial.HoleView
+        android:id="@+id/hv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>
